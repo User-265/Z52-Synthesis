@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,12 +93,18 @@
     <style>
         /* 自定义颜色配置 */
         :root {
-            --color-primary: #faf8ef;       /* 米黄色背景 */
-            --color-secondary: #bbada0;     /* 浅棕色容器 */
-            --color-tertiary: #8f7a66;      /* 深棕色按钮 */
-            --color-special: #edc53f;       /* 特殊按钮/元素 */
-            --color-text: #776e65;          /* 文本颜色 */
-            --color-empty: #cdc1b4;         /* 空白格子 */
+            --color-primary: #faf8ef;
+            /* 米黄色背景 */
+            --color-secondary: #bbada0;
+            /* 浅棕色容器 */
+            --color-tertiary: #8f7a66;
+            /* 深棕色按钮 */
+            --color-special: #edc53f;
+            /* 特殊按钮/元素 */
+            --color-text: #776e65;
+            /* 文本颜色 */
+            --color-empty: #cdc1b4;
+            /* 空白格子 */
         }
 
         body {
@@ -105,13 +112,33 @@
             color: var(--color-text);
         }
 
-        .bg-primary { background-color: var(--color-primary); }
-        .bg-secondary { background-color: var(--color-secondary); }
-        .bg-tertiary { background-color: var(--color-tertiary); }
-        .bg-special { background-color: var(--color-special); }
-        .bg-empty { background-color: var(--color-empty); }
-        .text-text { color: var(--color-text); }
-        .text-white { color: white; }
+        .bg-primary {
+            background-color: var(--color-primary);
+        }
+
+        .bg-secondary {
+            background-color: var(--color-secondary);
+        }
+
+        .bg-tertiary {
+            background-color: var(--color-tertiary);
+        }
+
+        .bg-special {
+            background-color: var(--color-special);
+        }
+
+        .bg-empty {
+            background-color: var(--color-empty);
+        }
+
+        .text-text {
+            color: var(--color-text);
+        }
+
+        .text-white {
+            color: white;
+        }
 
         /* 按钮悬停效果 */
         button:hover {
@@ -125,23 +152,67 @@
         }
     </style>
 </head>
+
 <body class="font-inter min-h-screen flex flex-col items-center justify-center p-4">
-    <!--Github页角-->
-    <a href="https://github.com/User-265/Z52-Synthesis" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <a href="https://github.com/User-265/Z52-Synthesis" class="github-corner" aria-label="View source on GitHub">
+        <svg width="80" height="80" viewBox="0 0 250 250"
+            style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path
+                d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+            <path
+                d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                fill="currentColor" class="octo-body"></path>
+        </svg>
+    </a>
+    <style>
+        .github-corner:hover .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+
+        @keyframes octocat-wave {
+
+            0%,
+            100% {
+                transform: rotate(0)
+            }
+
+            20%,
+            60% {
+                transform: rotate(-25deg)
+            }
+
+            40%,
+            80% {
+                transform: rotate(10deg)
+            }
+        }
+
+        @media (max-width: 500px) {
+            .github-corner:hover .octo-arm {
+                animation: none
+            }
+
+            .github-corner .octo-arm {
+                animation: octocat-wave 560ms ease-in-out
+            }
+        }
+    </style>
 
     <div class="max-w-md w-full">
         <header class="flex flex-col md:flex-row justify-between items-center mb-6">
             <div>
                 <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold text-text mb-2">合成Z52</h1>
-                <p class="text-text/80 text-sm md:text-base">两只Z驱相加，可以得到第三只！</p>
+                <p class="text-text/80 text-sm md:text-base">两只小Z驱，合成一只大Z驱！</p>
             </div>
             <div class="flex flex-wrap gap-3 mt-4 md:mt-0">
                 <div class="bg-secondary rounded-lg p-2 text-center">
-                    <div class="text-xs uppercase text-primary/80">得分</div>
+                    <div class="text-xs uppercase text-primary/80">当前得分</div>
                     <div class="text-xl font-bold text-white" id="score">0</div>
                 </div>
                 <div class="bg-secondary rounded-lg p-2 text-center">
-                    <div class="text-xs uppercase text-primary/80">最高得分</div>
+                    <div class="text-xs uppercase text-primary/80">最佳得分</div>
                     <div class="text-xl font-bold text-white" id="best-score">0</div>
                 </div>
                 <div class="bg-special rounded-lg p-2 text-center">
@@ -151,30 +222,31 @@
             </div>
         </header>
 
+        <div id="game-area1" class="flex flex-wrap gap-3 mb-6">
+            <button id="new-game"
+                class="bg-tertiary hover:bg-tertiary/90 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 shadow-md">
+                <i class="fa-solid fa-plus mr-2"></i>新的一局
+            </button>
+            <button id="toggle-display"
+                class="bg-tertiary hover:bg-tertiary/90 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 shadow-md">
+                <i class="fa-solid fa-image mr-2"></i><span id="toggle-text">显示数字</span>
+            </button>
+        </div>
 
-            <div id="game-area2" class="flex flex-wrap gap-3 mb-6">
-                <button id="new-game" class="bg-tertiary hover:bg-tertiary/90 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 shadow-md">
-                    <i class="fa-solid fa-plus mr-2"></i>新的一局
-                </button>
-                <button id="toggle-display" class="bg-tertiary hover:bg-tertiary/90 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 shadow-md">
-                    <i class="fa-solid fa-image mr-2"></i><span id="toggle-text">显示数字</span>
+        <!-- 给游戏网格容器添加 id="game-area" -->
+        <div id="game-area" class="relative bg-secondary rounded-lg p-2 mb-6 shadow-lg">
+            <div id="grid-container" class="grid grid-cols-4 gap-2">
+                <!-- Tiles will be generated here -->
+            </div>
+            <div id="game-message"
+                class="hidden absolute inset-0 bg-black/70 rounded-lg flex flex-col items-center justify-center">
+                <p id="game-message-text" class="text-2xl font-bold text-white mb-4"></p>
+                <button id="game-message-button"
+                    class="bg-white hover:bg-gray-200 text-tertiary font-bold py-2 px-4 rounded-lg transition-all duration-200">
+                    再来一局
                 </button>
             </div>
-
-            
-            <div id="game-area" class="relative bg-secondary rounded-lg p-2 mb-6 shadow-lg">
-                <div id="grid-container" class="grid grid-cols-4 gap-2">
-                    <!-- Tiles will be generated here -->
-                </div>
-                <div id="game-message" class="hidden absolute inset-0 bg-black/70 rounded-lg flex flex-col items-center justify-center">
-                    <p id="game-message-text" class="text-2xl font-bold text-white mb-4"></p>
-                    <button id="game-message-button" class="bg-white hover:bg-gray-200 text-tertiary font-bold py-2 px-4 rounded-lg transition-all duration-200">
-                        再来一次
-                    </button>
-                </div>
-            </div>
-
-
+        </div>
 
         <footer class="text-center text-text/60 text-xs">
             <p>Created with <i class="fa-solid fa-heart text-red-500"></i> | Inspired by 2048 by Gabriele Cirulli</p>
@@ -356,9 +428,9 @@
                         const tile = document.createElement('div');
                         tile.className = 'tile aspect-square rounded-lg flex items-center justify-center transition-all duration-200 ease-out';
 
-                        const isNewTile = lastPositions.some(pos => pos.fromX === i && pos.fromY === j) || 
-                                          mergedPositions.some(pos => pos.x === i && pos.y === j);
-                                          
+                        const isNewTile = lastPositions.some(pos => pos.fromX === i && pos.fromY === j) ||
+                            mergedPositions.some(pos => pos.x === i && pos.y === j);
+
                         const isMergedTile = mergedPositions.some(pos => pos.x === i && pos.y === j);
                         const isRemovedTile = removedPositions.some(pos => pos.x === i && pos.y === j);
                         const isSpecialTile = tilesToRemove.some(t => t.x === i && t.y === j);
@@ -380,7 +452,7 @@
                                 img.src = `avatar/${value}.jpg`;
                                 img.className = 'tile-image';
                                 img.alt = value;
-                                img.onerror = function() {
+                                img.onerror = function () {
                                     this.style.display = 'none';
                                     if (tile.querySelector('.tile-text')) {
                                         tile.querySelector('.tile-text').style.display = 'block';
@@ -626,6 +698,17 @@
                 return moved;
             }
 
+            function checkWin() {
+                for (let i = 0; i < gridSize; i++) {
+                    for (let j = 0; j < gridSize; j++) {
+                        if (grid[i][j] >= 52) {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
+
             function checkLose() {
                 if (hasEmptyCell()) return false;
                 for (let i = 0; i < gridSize; i++) {
@@ -652,10 +735,15 @@
                     bestScoreElement.textContent = bestScore;
                     localStorage.setItem('2048-best-score', bestScore);
                 }
+                if (checkWin()) {
+                    gameOver = true;
+                    gameMessageText.textContent = 'You Win!';
+                    gameMessage.classList.remove('hidden');
+                    return;
                 }
                 if (checkLose()) {
                     gameOver = true;
-                    gameMessageText.textContent = '没有船坞了!';
+                    gameMessageText.textContent = 'Game Over!';
                     gameMessage.classList.remove('hidden');
                     return;
                 }
@@ -739,14 +827,14 @@
 
             // 新增代码：阻止默认滚动行为
             const gameArea = document.getElementById('game-area');
-            const gameArea2 = document.getElementById('game-area2');
+            const gameArea1 = document.getElementById('game-area1');
             let isMouseInGameArea = false;
 
             gameArea.addEventListener('mouseenter', () => {
                 isMouseInGameArea = true;
             });
 
-            gameArea2.addEventListener('mouseenter', () => {
+            gameArea1.addEventListener('mouseenter', () => {
                 isMouseInGameArea = true;
             });
 
@@ -754,9 +842,11 @@
                 isMouseInGameArea = false;
             });
 
-            gameArea2.addEventListener('mouseleave', () => {
+            gameArea1.addEventListener('mouseleave', () => {
                 isMouseInGameArea = false;
             });
+
+            
 
             document.addEventListener('keydown', (e) => {
                 if (isMouseInGameArea && (e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
@@ -784,4 +874,5 @@
         });
     </script>
 </body>
+
 </html>
