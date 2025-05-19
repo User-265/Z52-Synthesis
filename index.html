@@ -253,6 +253,11 @@
         </footer>
     </div>
 
+    <!-- 添加音频元素 -->
+    <audio id="moveSound" src="sound/move.mp3"></audio>
+    <audio id="vanishSound" src="sound/vanish.mp3"></audio>
+    <audio id="z52Sound" src="sound/52.mp3"></audio>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Game variables
@@ -268,6 +273,11 @@
             let removedPositions = [];
             let tilesToRemove = [];
             let showImages = true; // 默认显示头像
+
+            // 获取音频元素
+            const moveSound = document.getElementById('moveSound');
+            const vanishSound = document.getElementById('vanishSound');
+            const z52Sound = document.getElementById('z52Sound');
 
             // 切换按钮事件
             const toggleButton = document.getElementById('toggle-display');
@@ -406,6 +416,11 @@
                         specialCount++;
                         specialCountElement.textContent = specialCount;
                         localStorage.setItem('2048-special-count', specialCount);
+                        z52Sound.currentTime = 0;
+                        z52Sound.play();
+                    } else {
+                        vanishSound.currentTime = 0;
+                        vanishSound.play();
                     }
                     return true;
                 }
@@ -545,6 +560,10 @@
                         }
                     }
                 }
+                if (moved) {
+                    moveSound.currentTime = 0;
+                    moveSound.play();
+                }
                 return moved;
             }
 
@@ -594,6 +613,10 @@
                             }
                         }
                     }
+                }
+                if (moved) {
+                    moveSound.currentTime = 0;
+                    moveSound.play();
                 }
                 return moved;
             }
@@ -645,6 +668,10 @@
                         }
                     }
                 }
+                if (moved) {
+                    moveSound.currentTime = 0;
+                    moveSound.play();
+                }
                 return moved;
             }
 
@@ -694,6 +721,10 @@
                             }
                         }
                     }
+                }
+                if (moved) {
+                    moveSound.currentTime = 0;
+                    moveSound.play();
                 }
                 return moved;
             }
@@ -837,10 +868,6 @@
             gameArea.addEventListener('mouseleave', () => {
                 isMouseInGameArea = false;
             });
-
-            
-
-            
 
             document.addEventListener('keydown', (e) => {
                 if (isMouseInGameArea && (e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
