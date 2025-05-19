@@ -222,7 +222,7 @@
             </div>
         </header>
 
-        <div id="game-area1" class="flex flex-wrap gap-3 mb-6">
+        <div class="flex flex-wrap gap-3 mb-6">
             <button id="new-game"
                 class="bg-tertiary hover:bg-tertiary/90 text-white font-bold py-2 px-4 rounded-lg transition-all duration-200 shadow-md">
                 <i class="fa-solid fa-plus mr-2"></i>新的一局
@@ -834,17 +834,11 @@
                 isMouseInGameArea = true;
             });
 
-            gameArea1.addEventListener('mouseenter', () => {
-                isMouseInGameArea = true;
-            });
-
             gameArea.addEventListener('mouseleave', () => {
                 isMouseInGameArea = false;
             });
 
-            gameArea1.addEventListener('mouseleave', () => {
-                isMouseInGameArea = false;
-            });
+            
 
             
 
