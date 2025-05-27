@@ -1,0 +1,174 @@
+/* styles.css */
+
+@layer utilities {
+    .content-auto {
+        content-visibility: auto;
+    }
+    .tile-1 { background-color: #faf8ef; color: #776e65; }
+    .tile-2 { background-color: #eee4da; color: #776e65; }
+    .tile-4 { background-color: #ede0c8; color: #776e65; }
+    .tile-8 { background-color: #f2b179; color: #f9f6f2; }
+    .tile-9 { background-color: #f5a966; color: #f9f6f2; }
+    .tile-11 { background-color: #f79e52; color: #f9f6f2; }
+    .tile-16 { background-color: #f59563; color: #f9f6f2; }
+    .tile-18 { background-color: #f68c50; color: #f9f6f2; }
+    .tile-19 { background-color: #f8823d; color: #f9f6f2; }
+    .tile-20 { background-color: #f9782a; color: #f9f6f2; }
+    .tile-21 { background-color: #fa6e17; color: #f9f6f2; }
+    .tile-23 { background-color: #fb6404; color: #f9f6f2; }
+    .tile-24 { background-color: #e05a04; color: #f9f6f2; }
+    .tile-25 { background-color: #c45003; color: #f9f6f2; }
+    .tile-26 { background-color: #a94603; color: #f9f6f2; }
+    .tile-28 { background-color: #8e3c02; color: #f9f6f2; }
+    .tile-35 { background-color: #edcf72; color: #f9f6f2; }
+    .tile-36 { background-color: #eec95f; color: #f9f6f2; }
+    .tile-43 { background-color: #efc34c; color: #f9f6f2; }
+    .tile-46 { background-color: #f0bd39; color: #f9f6f2; }
+    .tile-47 { background-color: #f1b726; color: #f9f6f2; }
+    .tile-52 { background-color: #f2b113; color: #f9f6f2; }
+    .tile-special { animation: pulse 0.5s infinite; }
+    .tile-flash { animation: flash-border 1s infinite; }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+@keyframes flash-border {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(246, 94, 59, 0.8); }
+    50% { box-shadow: 0 0 0 4px rgba(246, 94, 59, 0.3); }
+}
+
+.tile {
+    transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tile.new-tile {
+    animation: appear 0.3s ease-out;
+}
+
+.tile.merged-tile {
+    animation: merge 0.3s ease-out;
+    z-index: 20;
+}
+
+.tile.special-tile {
+    animation: special 0.5s ease-out;
+}
+
+@keyframes appear {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes merge {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes special {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0); opacity: 0; }
+}
+
+.tile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* 自定义颜色配置 */
+:root {
+    --color-primary: #faf8ef;
+    /* 米黄色背景 */
+    --color-secondary: #bbada0;
+    /* 浅棕色容器 */
+    --color-tertiary: #8f7a66;
+    /* 深棕色按钮 */
+    --color-special: #edc53f;
+    /* 特殊按钮/元素 */
+    --color-text: #776e65;
+    /* 文本颜色 */
+    --color-empty: #cdc1b4;
+    /* 空白格子 */
+}
+
+body {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary);
+}
+
+.bg-tertiary {
+    background-color: var(--color-tertiary);
+}
+
+.bg-special {
+    background-color: var(--color-special);
+}
+
+.bg-empty {
+    background-color: var(--color-empty);
+}
+
+.text-text {
+    color: var(--color-text);
+}
+
+.text-white {
+    color: white;
+}
+
+/* 按钮悬停效果 */
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+
+    0%,
+    100% {
+        transform: rotate(0)
+    }
+
+    20%,
+    60% {
+        transform: rotate(-25deg)
+    }
+
+    40%,
+    80% {
+        transform: rotate(10deg)
+    }
+}
+
+@media (max-width: 500px) {
+    .github-corner:hover .octo-arm {
+        animation: none
+    }
+
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+}
