@@ -5,3 +5,6 @@ Avatar from [AzurLane Bwiki](https://wiki.biligame.com/blhx/%E9%A6%96%E9%A1%B5)
 Sound effect from [Pixabay](https://pixabay.com/sound-effects/)
 
 Git page [Z52 Synthesis](https://user-265.github.io/Z52-Synthesis/)
+
+## Update 260525
+加入了 Z13, Z14, Z15
